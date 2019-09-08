@@ -31,7 +31,7 @@
 
 - Open Bash.exe and run the following command `curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
 - Then run `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
-- And finally if you are using nvm `sudo apt update && sudo apt install --no-install-recommends yarn` elsssse just run `sudo apt update && sudo apt install yarn`
+- And finally if you are using nvm `sudo apt update && sudo apt install --no-install-recommends yarn` else just run `sudo apt update && sudo apt install yarn`
 
 # Set up VSCode
 
@@ -55,5 +55,23 @@
 ### With Docker
 
 - You can run mongo db as a docker container and exposing the port used by mongo in the docker container to the host system to make it accessible as if it was running normally on your system.
+- `docker run --name local-mongo -d -p 27017:27017 -v ~/data/mongo:/data/db mongo:latest`
+- The above command will run a docker container with the name `local-mongo` in daemon mode with the port-mappings `27017` from the docker container to `27017` on the host system, i.e your windows machine. Lastly it will map the data folder from the docker container to your system so that the data is not cleared on each run.
+- To start the local mongo server you can then run `docker start local-mongo`
 
 ### Regular install
+
+- TODO
+
+# Set up Redis
+
+### With Docker
+
+- You can run redis db as a docker container and exposing the port used by redis in the docker container to the host system to make it accessible as if it was running normally on your system.
+- `docker run --name local-redis -d -p 6379:6379 -v ~/data/redis:/data redis:latest redis-server`
+- The above command will run a docker container with the name `local-mongo` in daemon mode with the port-mappings `6379` from the docker container to `6379` on the host system, i.e your windows machine. Lastly it will map the data folder from the docker container to your system so that the data is not cleared on each run.
+- To start the local redis server you can then run `docker start local-redis`
+
+## Regular install
+
+- TODO
