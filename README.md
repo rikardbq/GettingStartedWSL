@@ -86,10 +86,10 @@
 - Extract to anywhere you like but as with Java, keep the files on the windows filesystem.
 
 - Next you need to add some environment variables \
-  ![some text]("assets/envs1.png") \
-  ![some text2]("assets/envs2.png") \
-  ![some text3]("assets/envs3.png") \
-  ![some text4]("asset/envs4.png")
+  ![some text](assets/envs1.png) \
+  ![some text2](assets/envs2.png) \
+  ![some text3](assets/envs3.png) \
+  ![some text4](assets/envs4.png)
 
 - To see that it worked you should now the able to run (in your windows command line) `java --version` or if you do it in WSL `java.exe --version`
 - For maven you run `mvn -v`
