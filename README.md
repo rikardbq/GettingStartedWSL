@@ -75,3 +75,21 @@
 ## Regular install
 
 - TODO
+
+# Set up Java and Maven
+
+#### This sets up Java and Maven the regular windows way
+
+- Download OpenJDK 12 from https://jdk.java.net/12/ (select the windows alternative)
+- Extract the folder to any place you like, but keep it on the windows filesystem or else some applications will have trouble finding the java.exe
+- Download Maven from https://maven.apache.org/download.cgi (select the binary version)
+- Extract to anywhere you like but as with Java, keep the files on the windows filesystem.
+
+- Next you need to add some environment variables \
+  ![some text]("assets/envs1.png") \
+  ![some text2]("assets/envs2.png") \
+  ![some text3]("assets/envs3.png") \
+  ![some text4]("asset/envs4.png")
+
+- To see that it worked you should now the able to run (in your windows command line) `java --version` or if you do it in WSL `java.exe --version`
+- For maven you run `mvn -v`
