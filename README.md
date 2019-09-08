@@ -69,7 +69,7 @@
 
 - You can run redis db as a docker container and exposing the port used by redis in the docker container to the host system to make it accessible as if it was running normally on your system.
 - `docker run --name local-redis -d -p 6379:6379 -v ~/data/redis:/data redis:latest redis-server`
-- The above command will run a docker container with the name `local-mongo` in daemon mode with the port-mappings `6379` from the docker container to `6379` on the host system, i.e your windows machine. Lastly it will map the data folder from the docker container to your system so that the data is not cleared on each run.
+- The above command will run a docker container with the name `local-redis` in daemon mode with the port-mappings `6379` from the docker container to `6379` on the host system, i.e your windows machine. Lastly it will map the data folder from the docker container to your system so that the data is not cleared on each run.
 - To start the local redis server you can then run `docker start local-redis`
 
 ## Regular install
@@ -88,7 +88,8 @@
 - Next you need to add some environment variables \
   ![some text](assets/envs1.png) \
   ![some text2](assets/envs2.png) \
-  ![some text3](assets/envs3.png) \
+  ![some text3](assets/envs3.png)
+- Then select the entry named Path and click `Edit` and add the following
   ![some text4](assets/envs4.png)
 
 - To see that it worked you should now the able to run (in your windows command line) `java --version` or if you do it in WSL `java.exe --version`
