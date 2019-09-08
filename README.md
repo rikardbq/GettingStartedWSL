@@ -49,3 +49,11 @@
 
 - Firstly you need to download and install docker from https://hub.docker.com/
 - To make your docker.exe runnable from WSL without having to write docker.exe you can instead use an alias, simply open your Bash.exe and run `echo "alias docker=docker.exe" >> ~/.bash_aliases` this will append the string `alias docker=docker.exe` your .bash_aliases file located in your home directory ( ~/ )
+
+# Set up MongoDB
+
+### With Docker
+
+- You can run mongo db as a docker container and exposing the port used by mongo in the docker container to the host system to make it accessible as if it was running normally on your system.
+
+### Regular install
