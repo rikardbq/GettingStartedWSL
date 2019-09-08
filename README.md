@@ -31,7 +31,7 @@
 
 - Open Bash.exe and run the following command `curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
 - Then run `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
-- And finally if you are using nvm `sudo apt update && sudo apt install --no-install-recommends yarn` else just run `sudo apt update && sudo apt install yarn`
+- And finally if you are using nvm `sudo apt update && sudo apt install --no-install-recommends yarn` elsssse just run `sudo apt update && sudo apt install yarn`
 
 # Set up VSCode
 
@@ -44,3 +44,8 @@
   - ESLint
   - GitLens
   - Prettier
+
+# Set up Docker
+
+- Firstly you need to download and install docker from https://hub.docker.com/
+- To make your docker.exe runnable from WSL without having to write docker.exe you can instead use an alias, simply open your Bash.exe and run `echo "alias docker=docker.exe" >> ~/.bash_aliases` this will append the string `alias docker=docker.exe` your .bash_aliases file located in your home directory ( ~/ )
