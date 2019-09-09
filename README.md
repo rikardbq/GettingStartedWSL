@@ -1,4 +1,4 @@
-# Getting started @ Qopla (Windows and WSL)
+# Getting started (Windows and WSL)
 
 ### Enabling WSL on your machine
 
