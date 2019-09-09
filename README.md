@@ -63,8 +63,9 @@
 ### With Docker
 
 - You can run mongo db as a docker container and exposing the port used by mongo in the docker container to the host system to make it accessible as if it was running normally on your system.
-- `docker run --name local-mongo -d -p 27017:27017 -v /c/Users/<your username>/dev/data/mongo/db:/data/db mongo:latest`
-- The above command will run a docker container with the name `local-mongo` in daemon mode with the port-mappings `27017` from the docker container to `27017` on the host system, i.e your windows machine. Lastly it will map the data folder from the docker container to your system so that the data is not cleared on each run.
+- To persist data across container runs you can create a volumes, do this by running `docker volume create mongodata`
+- `docker run --name local-mongo -d -p 27017:27017 -v mongodata:/data/db mongo:latest`
+- The above command will run a docker container with the name `local-mongo` in daemon mode with the port-mappings `27017` from the docker container to `27017` on the host system, i.e your windows machine. Lastly it will map the data folder from the docker container to your docker volume called `mongodata` that you created earlier.
 - To start the local mongo server you can then run `docker start local-mongo`
 
 ### Regular install
@@ -76,8 +77,9 @@
 ### With Docker
 
 - You can run redis db as a docker container and exposing the port used by redis in the docker container to the host system to make it accessible as if it was running normally on your system.
-- `docker run --name local-redis -d -p 6379:6379 -v /c/Users/<your username>/dev/data/redis:/data redis:latest redis-server`
-- The above command will run a docker container with the name `local-redis` in daemon mode with the port-mappings `6379` from the docker container to `6379` on the host system, i.e your windows machine. Lastly it will map the data folder from the docker container to your system so that the data is not cleared on each run.
+- To persist data across container runs you can create a volumes, do this by running `docker volume create redisdata`
+- `docker run --name local-redis -d -p 6379:6379 -v redisdata:/data redis:latest redis-server`
+- The above command will run a docker container with the name `local-redis` in daemon mode with the port-mappings `6379` from the docker container to `6379` on the host system, i.e your windows machine. Lastly it will map the data folder from the docker container to your docker volume called `redisdata` that you created earlier.
 - To start the local redis server you can then run `docker start local-redis`
 
 ## Regular install
