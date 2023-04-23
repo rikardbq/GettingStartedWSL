@@ -1,3 +1,7 @@
+# LEGACY
+## This was made for WSL 1 with a particular setup, should you find this useful please double-check that the information is still correct
+# Don't blindly copy paste !!!
+
 # Getting started (Windows and WSL)
 
 ### Enabling WSL on your machine
